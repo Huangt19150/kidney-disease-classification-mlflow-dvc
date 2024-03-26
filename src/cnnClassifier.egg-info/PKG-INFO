@@ -1,3 +1,13 @@
+Metadata-Version: 2.1
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/entbappy/kidney-disease-classification-mlflow-dvc
+Author: entbappy
+Author-email: entbappy73@gmail.com
+Project-URL: Bug Tracker, https://github.com/entbappy/kidney-disease-classification-mlflow-dvc/issues
+Description-Content-Type: text/markdown
+
 # Kidney-Disease-Classification-MLflow-DVC
 
 # How to run?
