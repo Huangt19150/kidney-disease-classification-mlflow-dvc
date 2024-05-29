@@ -115,3 +115,150 @@ x==============x]
 [2024-04-06 15:04:54,322: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==============x]
+[2024-04-15 08:38:39,091: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-15 08:38:39,100: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-15 08:38:39,103: INFO: common: created directory at: artifacts]
+[2024-04-15 08:39:17,889: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-04-15 08:39:18,816: INFO: builder_impl: Assets written to: C:\Users\TIMEFO~1\AppData\Local\Temp\tmp7dg840g4\model\data\model\assets]
+[2024-04-17 08:42:16,112: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-17 08:42:16,118: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-17 08:42:16,121: INFO: common: created directory at: artifacts]
+[2024-04-17 08:42:57,396: INFO: common: json file saved at: scores.json]
+[2024-04-17 08:43:01,570: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-04-17 08:43:03,294: INFO: builder_impl: Assets written to: C:\Users\TIMEFO~1\AppData\Local\Temp\tmp0hslybq5\model\data\model\assets]
+[2024-04-17 08:45:08,332: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-17 08:45:08,338: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-17 08:45:08,340: INFO: common: created directory at: artifacts]
+[2024-04-17 08:45:46,008: INFO: common: json file saved at: scores.json]
+[2024-04-17 08:45:49,543: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-04-17 08:45:50,544: INFO: builder_impl: Assets written to: C:\Users\TIMEFO~1\AppData\Local\Temp\tmprh_k2jxb\model\data\model\assets]
+[2024-05-24 09:11:51,455: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-24 09:11:51,458: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-24 09:11:51,460: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-24 09:11:51,461: INFO: common: created directory at: artifacts]
+[2024-05-24 09:11:51,463: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-24 09:11:51,469: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-24 09:38:53,025: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-24 09:38:53,029: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-24 09:38:53,031: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-24 09:38:53,031: INFO: common: created directory at: artifacts]
+[2024-05-24 09:38:53,032: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-24 09:38:53,032: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-24 09:43:01,425: ERROR: main: ("Connection broken: ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None)", ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None))]
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 737, in _error_catcher
+    yield
+  File "D:\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 862, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "D:\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 845, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "D:\anaconda3\envs\kidney\lib\http\client.py", line 459, in read
+    n = self.readinto(b)
+  File "D:\anaconda3\envs\kidney\lib\http\client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "D:\anaconda3\envs\kidney\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "D:\anaconda3\envs\kidney\lib\ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "D:\anaconda3\envs\kidney\lib\ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "D:\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 1043, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "D:\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 935, in read
+    data = self._raw_read(amt)
+  File "D:\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 891, in _raw_read
+    self._fp.close()
+  File "D:\anaconda3\envs\kidney\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "D:\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 764, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None)", ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    obj.main()
+  File "d:\pythonproject\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "d:\pythonproject\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\data_ingestion.py", line 30, in download_file
+    raise e
+  File "d:\pythonproject\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\data_ingestion.py", line 25, in download_file
+    gdown.download(prefix+file_id, zip_download_dir)
+  File "D:\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 344, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "D:\anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None)", ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None))
+[2024-05-28 08:39:54,160: INFO: stage_03_model_training: **********************]
+[2024-05-28 08:39:54,160: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-05-28 08:39:54,164: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-28 08:39:54,168: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-28 08:39:54,169: INFO: common: created directory at: artifacts]
+[2024-05-28 08:39:54,172: INFO: common: created directory at: artifacts\training]
+[2024-05-28 08:42:24,668: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==============x]
+[2024-05-28 08:43:46,765: INFO: stage_04_model_evaluation: **********************]
+[2024-05-28 08:43:46,765: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-05-28 08:43:46,769: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-28 08:43:46,771: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-28 08:43:46,773: INFO: common: created directory at: artifacts]
+[2024-05-28 08:44:44,947: INFO: common: json file saved at: scores.json]
+[2024-05-28 08:44:48,961: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-05-28 08:44:49,916: INFO: builder_impl: Assets written to: C:\Users\TIMEFO~1\AppData\Local\Temp\tmpzg1rx5ff\model\data\model\assets]
+[2024-05-28 08:45:10,064: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\831c13342f0a47379df6993f5c63a823\artifacts\model\data]
+[2024-05-28 08:45:10,072: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\831c13342f0a47379df6993f5c63a823\artifacts\model\data\model]
+[2024-05-28 08:45:10,073: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\831c13342f0a47379df6993f5c63a823\artifacts\model\data\model\assets]
+[2024-05-28 08:45:10,083: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\831c13342f0a47379df6993f5c63a823\artifacts\model\data\model\variables]
+[2024-05-28 08:45:10,240: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==============x]
+[2024-05-29 19:55:07,485: INFO: stage_04_model_evaluation: **********************]
+[2024-05-29 19:55:07,488: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-05-29 19:55:07,536: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-29 19:55:07,564: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-29 19:55:07,588: INFO: common: created directory at: artifacts]
+[2024-05-29 19:55:52,380: INFO: common: json file saved at: scores.json]
+[2024-05-29 19:56:00,131: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-05-29 19:56:03,364: INFO: builder_impl: Assets written to: C:\Users\TIMEFO~1\AppData\Local\Temp\tmp9nei6qgi\model\data\model\assets]
+[2024-05-29 19:56:41,022: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\a0ad0344bdb34f5fb03ceb56dd635aad\artifacts\model\data]
+[2024-05-29 19:56:41,025: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\a0ad0344bdb34f5fb03ceb56dd635aad\artifacts\model\data\model]
+[2024-05-29 19:56:41,027: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\a0ad0344bdb34f5fb03ceb56dd635aad\artifacts\model\data\model\assets]
+[2024-05-29 19:56:41,033: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\a0ad0344bdb34f5fb03ceb56dd635aad\artifacts\model\data\model\variables]
+[2024-05-29 19:56:41,173: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==============x]
+[2024-05-29 20:48:40,456: INFO: stage_04_model_evaluation: **********************]
+[2024-05-29 20:48:40,457: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-05-29 20:48:40,463: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-29 20:48:40,471: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-29 20:48:40,473: INFO: common: created directory at: artifacts]
+[2024-05-29 20:49:25,610: INFO: common: json file saved at: scores.json]
+[2024-05-29 20:49:28,532: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-05-29 20:49:29,501: INFO: builder_impl: Assets written to: C:\Users\TIMEFO~1\AppData\Local\Temp\tmphjqa06nf\model\data\model\assets]
+[2024-05-29 20:49:49,501: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\cd1aa0b0f4fa440bae49488ffb5e3cb0\artifacts\model\data]
+[2024-05-29 20:49:49,519: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\cd1aa0b0f4fa440bae49488ffb5e3cb0\artifacts\model\data\model]
+[2024-05-29 20:49:49,522: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\cd1aa0b0f4fa440bae49488ffb5e3cb0\artifacts\model\data\model\assets]
+[2024-05-29 20:49:49,533: INFO: dir_util: creating D:\PythonProject\kidney-disease-classification-mlflow-dvc\mlruns\0\cd1aa0b0f4fa440bae49488ffb5e3cb0\artifacts\model\data\model\variables]
+[2024-05-29 20:49:49,699: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==============x]
+[2024-05-29 20:56:25,922: INFO: stage_04_model_evaluation: **********************]
+[2024-05-29 20:56:25,923: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-05-29 20:56:25,926: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-29 20:56:25,930: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-29 20:56:25,932: INFO: common: created directory at: artifacts]
+[2024-05-29 20:57:17,202: INFO: common: json file saved at: scores.json]
+[2024-05-29 20:57:21,324: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-05-29 20:57:22,460: INFO: builder_impl: Assets written to: C:\Users\TIMEFO~1\AppData\Local\Temp\tmpgbtt23dc\model\data\model\assets]
+[2024-05-29 20:58:30,118: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==============x]
