@@ -284,3 +284,77 @@ x============x]
 [2024-06-03 09:13:02,340: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
 
 x==============x]
+[2024-06-03 13:50:24,299: INFO: stage_03_model_training: **********************]
+[2024-06-03 13:50:24,300: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-06-03 13:50:24,307: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-03 13:50:24,311: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-03 13:50:24,311: INFO: common: created directory at: artifacts]
+[2024-06-03 13:50:24,312: INFO: common: created directory at: artifacts/training]
+[2024-06-03 13:51:18,323: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==============x]
+[2024-06-03 13:51:25,338: INFO: stage_04_model_evaluation: **********************]
+[2024-06-03 13:51:25,342: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-06-03 13:51:25,344: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-03 13:51:25,345: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-03 13:51:25,345: INFO: common: created directory at: artifacts]
+[2024-06-03 13:51:33,969: INFO: common: json file saved at: scores.json]
+[2024-06-03 13:51:36,233: INFO: builder_impl: Assets written to: /var/folders/71/pf___qm5465gbc0g8rslzwmw0000gp/T/tmp3edwb8si/model/data/model/assets]
+[2024-06-03 13:51:36,524: ERROR: stage_04_model_evaluation: module 'tensorflow.keras' has no attribute '__version__']
+Traceback (most recent call last):
+  File "/Users/thuang/Documents/Personal/code/kidney-disease-classification-mlflow-dvc/src/cnnClassifier/pipeline/stage_04_model_evaluation.py", line 32, in <module>
+    obj.main()
+  File "/Users/thuang/Documents/Personal/code/kidney-disease-classification-mlflow-dvc/src/cnnClassifier/pipeline/stage_04_model_evaluation.py", line 24, in main
+    evaluation.log_into_mlflow()
+  File "/Users/thuang/Documents/Personal/code/kidney-disease-classification-mlflow-dvc/src/cnnClassifier/components/model_evaluation_mlflow.py", line 74, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model", registered_model_name="VGG16Model")
+  File "/Users/thuang/Documents/Personal/code/kidney-disease-classification-mlflow-dvc/venv/lib/python3.11/site-packages/mlflow/tensorflow/__init__.py", line 222, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "/Users/thuang/Documents/Personal/code/kidney-disease-classification-mlflow-dvc/venv/lib/python3.11/site-packages/mlflow/models/model.py", line 551, in log
+    flavor.save_model(path=local_path, mlflow_model=mlflow_model, **kwargs)
+  File "/Users/thuang/Documents/Personal/code/kidney-disease-classification-mlflow-dvc/venv/lib/python3.11/site-packages/mlflow/tensorflow/__init__.py", line 445, in save_model
+    "keras_version": keras_module.__version__,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow.keras' has no attribute '__version__'
+[2024-06-03 13:58:19,931: INFO: stage_04_model_evaluation: **********************]
+[2024-06-03 13:58:19,933: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-06-03 13:58:19,934: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-03 13:58:19,935: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-03 13:58:19,935: INFO: common: created directory at: artifacts]
+[2024-06-03 13:58:28,921: INFO: common: json file saved at: scores.json]
+[2024-06-03 13:58:30,881: INFO: builder_impl: Assets written to: /var/folders/71/pf___qm5465gbc0g8rslzwmw0000gp/T/tmph3yfttet/model/data/model/assets]
+[2024-06-03 13:58:54,140: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==============x]
+[2024-06-03 14:14:05,676: INFO: stage_02_prepare_base_model: **************************]
+[2024-06-03 14:14:05,676: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-06-03 14:14:05,678: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-03 14:14:05,678: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-03 14:14:05,679: INFO: common: created directory at: artifacts]
+[2024-06-03 14:14:05,679: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-06-03 14:14:05,959: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-06-03 14:14:06,040: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-03 14:14:06,043: WARNING: __init__: There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-03 14:14:06,087: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==============x]
+[2024-06-03 14:14:09,911: INFO: stage_03_model_training: **********************]
+[2024-06-03 14:14:09,911: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-06-03 14:14:09,912: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-03 14:14:09,913: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-03 14:14:09,913: INFO: common: created directory at: artifacts]
+[2024-06-03 14:14:09,913: INFO: common: created directory at: artifacts/training]
+[2024-06-03 14:15:03,204: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==============x]
+[2024-06-03 14:15:08,043: INFO: stage_04_model_evaluation: **********************]
+[2024-06-03 14:15:08,045: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-06-03 14:15:08,046: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-03 14:15:08,046: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-03 14:15:08,046: INFO: common: created directory at: artifacts]
+[2024-06-03 14:15:16,821: INFO: common: json file saved at: scores.json]
+[2024-06-03 14:15:18,684: INFO: builder_impl: Assets written to: /var/folders/71/pf___qm5465gbc0g8rslzwmw0000gp/T/tmpypg8kndq/model/data/model/assets]
+[2024-06-03 14:15:44,490: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==============x]

@@ -65,3 +65,12 @@ export MLFLOW_TRACKING_USERNAME=Huangt19150
 export MLFLOW_TRACKING_PASSWORD=ba01b5932e155b74164a83859653e60d9d824996
 
 ```
+
+## DVC
+
+```bash
+
+dvc init
+dvc repro
+
+```
