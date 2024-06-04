@@ -4,6 +4,7 @@ from cnnClassifier import logger
 
 STAGE_NAME = "Training"
 
+
 class ModelTrainingPipline:
     def __init__(self):
         pass
