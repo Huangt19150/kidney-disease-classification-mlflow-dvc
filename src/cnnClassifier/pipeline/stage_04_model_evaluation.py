@@ -1,9 +1,10 @@
-from cnnClassifier.config.configuration import ConfigurationManager
-from cnnClassifier.components.model_evaluation_mlflow import Evaluation
-from cnnClassifier import logger
-
 # TODO: how to better configure environment variables?
 import os
+
+from cnnClassifier import logger
+from cnnClassifier.components.model_evaluation_mlflow import Evaluation
+from cnnClassifier.config.configuration import ConfigurationManager
+
 os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/Huangt19150/kidney-disease-classification-mlflow-dvc.mlflow"
 os.environ["MLFLOW_TRACKING_USERNAME"]="Huangt19150"
 os.environ["MLFLOW_TRACKING_PASSWORD"]="ba01b5932e155b74164a83859653e60d9d824996"
@@ -21,8 +22,7 @@ class EvaluationPipeline:
         eval_config = config.get_evaluation_config()
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
-        evaluation.log_into_mlflow()
-
+        # evaluation.log_into_mlflow()
 
 if __name__ == '__main__':
     try:
@@ -35,5 +35,5 @@ if __name__ == '__main__':
     except Exception as e:
         logger.exception(e)
         raise e
-    
+
 
