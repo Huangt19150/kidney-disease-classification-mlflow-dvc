@@ -1,11 +1,14 @@
+# TODO: how to better configure environment variables?
+import os
+
 from cnnClassifier import logger
-from cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
-from cnnClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
+from cnnClassifier.pipeline.stage_01_data_ingestion import \
+    DataIngestionTrainingPipeline
+from cnnClassifier.pipeline.stage_02_prepare_base_model import \
+    PrepareBaseModelTrainingPipeline
 from cnnClassifier.pipeline.stage_03_model_training import ModelTrainingPipline
 from cnnClassifier.pipeline.stage_04_model_evaluation import EvaluationPipeline
 
-# TODO: how to better configure environment variables?
-import os
 os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/Huangt19150/kidney-disease-classification-mlflow-dvc.mlflow"
 os.environ["MLFLOW_TRACKING_USERNAME"]="Huangt19150"
 os.environ["MLFLOW_TRACKING_PASSWORD"]="ba01b5932e155b74164a83859653e60d9d824996"
@@ -58,5 +61,3 @@ try:
 except Exception as e:
     logger.exception(e)
     raise e
-
-# dummy commit
