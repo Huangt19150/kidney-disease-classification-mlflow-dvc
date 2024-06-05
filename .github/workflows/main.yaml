@@ -33,7 +33,7 @@ jobs:
       - name: Run unit tests
         run: echo "Running unit tests"
 
-  # 2. CD (*Delivery): Push and build new docker
+  # 2. CD (*Delivery): Push and build new docker image on ECR
   build-and-push-ecr-image:
     name: Continuous Delivery
     needs: integration
